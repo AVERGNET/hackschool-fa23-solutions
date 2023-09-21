@@ -7,7 +7,8 @@ const GameStats = require('../models/gameStats');
 // R
 exports.getGameStats = async (req, res) => {
   try {
-    const gameStats = await GameStats.find();
+    // const gameStats = await GameStats.find();
+    res.status(200).json({ message: "hi mom" })
     res.json(gameStats);
   } catch (error) {
     res.status(500).json({ error: 'Failed to retrieve game stats' });
